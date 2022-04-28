@@ -1,0 +1,16 @@
+int isPalindrome(string S)
+	{
+	    if(S.length()==0 || S.length()==1){
+		return 1;
+	}
+	char x=S[0];
+	char y=S[S.length()-1];
+	
+	S.erase(0,1);
+	S.erase(S.length()-1,1);
+	if(x!=y){
+		return 0;
+	}
+	
+	return isPalindrome(S);
+	}
